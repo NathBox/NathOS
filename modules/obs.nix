@@ -2,7 +2,7 @@
 
     # ====== OBS Studio ====== #
 
-    flake.nixosModules.obs = { config, pkgs, ... }: {
+    flake.nixosModules.obs = { config, pkgs, pkgs-unstable, ... }: {
       programs.obs-studio = {
         enable = true;
         package = pkgs-unstable.obs-studio;
