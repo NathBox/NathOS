@@ -1,10 +1,5 @@
 # ====== Unstable Packages Overlay ====== #
-{
-  inputs,
-  withSystem,
-  ...
-}:
-{
+{ self, inputs, withSystem, ... }: {
 
   perSystem =
     { system, ... }:
