@@ -15,5 +15,14 @@
 
     programs.uwsm.enable = true; 
   };
+  
+  flake.homeModules.myHyprland = { config, ... }: {
+    home.file = {
+      ".config/hypr/hyprland.lua" = {
+        source = ./hypr/hyprland.lua;
+        recursive = true;
+      };
+    };
+  };
 }
 

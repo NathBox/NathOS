@@ -24,6 +24,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("noctalia-shell")
     hl.exec_cmd("dunst")
     hl.exec_cmd("steam")
-    hl.exec_cmd("xremap ~/NathOS/nath/homeprint.yml --device '2.4G Wireless Keyboard'")
+    hl.exec_cmd("xremap ~/NathOS/dotfiles/homeprint.yml --device '2.4G Wireless Keyboard'")
 end)
 
