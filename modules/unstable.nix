@@ -1,25 +1,14 @@
 # ====== Unstable Packages Overlay ====== #
-{ self, inputs, withSystem, ... }: {
+{ self, inputs, ... }: {
 
-  perSystem =
-    { system, ... }:
-    {
-      _module.args.pkgs = import inputs.nixpkgs {
-        inherit system;
-        overlays = [
-          (final: _prev: {
-            pkgs-unstable = import inputs.nixpkgs-unstable {
-              inherit (final) config;
-              inherit system;
-            };
-          })
-        ];
+  flake.nixosModules.unstable = { config, lib, ... }: {
+    _module.args = {
+      pkgs-unstable = 
+        import inputs.nixpkgs-unstable {
+        system = "x86_64-linux";
+        config.allowUnfree = true; # Set as needed
       };
-    };
-
-  flake = {
-    overlays.default = _final: prev: {
-      local = withSystem prev.stdenv.hostPlatform.system ({ config, ... }: config.packages);
     };
   };
 }
+
