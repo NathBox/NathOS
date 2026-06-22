@@ -18,12 +18,13 @@
       self.nixosModules.noctalia
       self.nixosModules.spotify        
       #self.nixosModules.memlock
-      inputs.home-manager.nixosModules.default
-      #self.nixosModules.unstable
+      self.nixosModules.unstable
       self.nixosModules.obs
       self.nixosModules.timezone
       self.nixosModules.xdg
       self.nixosModules.gaming
+      #self.nixosModules.myHomeManager
+      inputs.home-manager.nixosModules.default
     ]; 
 
 
@@ -113,7 +114,10 @@
 
 
     # ====== Home-Manager User ====== #
-    home-manager.users.nath = self.homeModules.nathHome;
+    home-manager = {
+      users.nath = self.homeModules.nathHome;
+      useUserPackages = true;
+    };
 
 
    # ====== SDDM ====== #
@@ -155,11 +159,16 @@
     nixpkgs.config.allowUnfree = true;
 
 
+    # ====== Package Build Fail Workarounds ======
+    documentation.doc.enable = false;
+
+
     # ====== System Level Packages ======
     environment.systemPackages = (with pkgs; [
       wget
       curl
-      wineWowPackages.waylandFull
+      appimage-run
+      wineWow64Packages.waylandFull
       winetricks
       libimobiledevice
       #Cli Tools and Terminals
@@ -183,6 +192,7 @@
       ffmpeg_6
       #vkbasalt
       xremap
+      brightnessctl
 
       #Wayland and Hyprland
       grim
@@ -242,6 +252,7 @@
       openai-whisper
       vesktop
       screen
+      inputs.helium.packages.${system}.default
     ])
 
     ++

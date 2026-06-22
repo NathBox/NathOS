@@ -2,11 +2,17 @@
    
 
  # ====== Home-Mananger Configuration ====== #
-   flake.homeModules.nathHome = { pkgs, pkgs-unstable, fluxer-nix, ... }: {  
+   flake.homeModules.nathHome = { pkgs, pkgs-unstable, ... }: {  
+     imports = [
+       self.homeModules.myHyprland
+       self.homeModules.myNoctalia
+     ];
 
-     home.stateVersion = "24.05";
-     home.username = "nath";
-     home.homeDirectory = "/home/nath";
+     home = { 
+       stateVersion = "24.05";
+       username = "nath";
+       homeDirectory = "/home/nath";
+     };
 
 
     # ====== Allow Unfree ======
@@ -24,19 +30,15 @@
 
 
     # ====== User Level Packages ======
-    home.packages = 
-     (with pkgs; [
-    ])
+    #home.packages = 
+    # (with pkgs; [
+    #])
 
 
-    ++
+    #++
 
-    (with pkgs-unstable; [
-    ]);
-
-
-  # ====== Allow Insecure Packages ====== 
-  #nixpkgs.config.permittedInsecurePackages = ["qtwebengine-5.15.19"];
+    #(with pkgs-unstable; [
+    #]);
 
 
     # ====== Automount Drives ====== 
@@ -50,7 +52,6 @@
     #  };
     #};    
 
-
  
     # GTK Setups
     #gtk = {
@@ -60,6 +61,7 @@
     #    name = "Flat-Remix-GTK-Grey-Darkest";
     #  };
     #};
+
 
     # ====== Bash ======  
      programs.bash = {
@@ -87,23 +89,23 @@
   # Create XDG Dirs
     xdg = {
       userDirs = {
-        enable = true;
-        createDirectories = true;
+        enable = false;
+        createDirectories = false;
       };
     };  
 
     # ====== Home File Placement ====== # 
       home.file = {
         ".config/fastfetch" = {
-          source = ./fastfetch;
+          source = ../../dotfiles/fastfetch;
           recursive = true;
         };
         ".local/share/icons/NotwaitaBlack" = {
-          source = ./icons/NotwaitaBlack;
+          source = ../../dotfiles/icons/NotwaitaBlack;
           recursive = true;
         };
         ".local/share/fonts" = {
-          source = ./fonts;
+          source = ../../dotfiles/fonts;
           recursive = true;
         };
      };
@@ -119,7 +121,6 @@
          icon = "/home/nath/.local/share/fallout-ce/fallout.ico";
        };
     };   
-
  
     # Steam Proton GE Setup
      home.sessionVariables = {

@@ -1,0 +1,294 @@
+ 
+  { self, inputs, ... }: {
+   
+ # ====== Home-Manager Declaration ====== # 
+    flake.homeConfigurations.nath = inputs.home-manager.lib.homeManagerConfiguration {
+      pkgs = import inputs.nixpkgs { system = "x86_64-linux"; };
+      modules = [
+        self.homeModules.nathHome 
+        {
+           home.username = "nath";
+           home.homeDirectory = "/home/nath";
+
+        } 
+      ];
+    };
+
+
+ # ====== Home-Mananger Configuration ====== #
+   flake.homeModules.nathHome = { pkgs, pkgs-unstable, fluxer-nix, ... }: {  
+     home.stateVersion = "24.05";
+
+
+    # ====== Allow Unfree ======
+    nixpkgs.config.allowUnfreePredicate = _: true;
+    
+ 
+    # ====== Git ======
+    programs.git = {
+      enable = true;
+      settings.user = {
+        name = "NathBox";
+        email = "nathbox@protonmail.com";
+      };
+    };
+
+
+    # ====== User Level Packages ======
+    home.packages = 
+     (with pkgs; [
+
+      #Cli Tools and Terminals
+      fastfetch
+      alacritty
+      ghostty
+      cool-retro-term
+      eza
+      vim
+      #neovim
+      unzip
+      unrar
+      zip
+      fd
+      asciiquarium
+      btop  
+      caligula # etcher alternative
+      yt-dlp    
+      #peaclock
+      wev
+      #holehe    
+      #steamcmd
+      nix-index
+      comma
+      ffmpeg_6
+      #vkbasalt 
+      xremap
+ 
+      #Wayland and Hyprland
+      #waybar
+      wofi
+      dunst
+      grim
+      slurp
+      swww
+      adwaita-icon-theme    
+      wl-clipboard    
+      #hyprlock
+      hyprcursor
+      qimgv
+    
+      #Disk Stuff
+      nemo-with-extensions        
+      file-roller
+      kdePackages.filelight
+ 
+      #Gaming
+      protonup-ng
+      mangohud
+      dolphin-emu
+      duckstation
+     # nestopia-ue
+      snes9x
+      ares
+      #rpcs3    
+      pcsx2   
+      #vbam #visualboyadvanced
+      ioquake3 
+      prismlauncher
+      fallout-ce
+      #fallout2-ce
+      protontricks
+      #shadps4
+      #clonehero
+      lsfg-vk
+      lsfg-vk-ui
+     # python313Packages.ds4drv
+      mgba
+
+      #Media
+      mpv
+      vlc
+      #gimp
+      gimp3
+      qbittorrent
+      mullvad-vpn
+      audacity
+     # ardour    
+      subtitleedit
+      freetube
+     # spotify
+      #jellyfin-media-player
+      #jellyfin-mpv-shim
+
+      # Social Media
+      signal-desktop
+      fluxer-nix.packages.${pkgs.stdenv.hostPlatform.system}.fluxer
+      #Audio and Bluetooth
+      pavucontrol
+      bluez
+      bluez-tools   
+ 
+      obsidian
+      polychromatic
+      monero-gui  
+      bitcoin
+      libreoffice    
+      anki-bin   
+      ifuse
+      openrgb
+      mangojuice
+
+      #web
+      ungoogled-chromium
+     # librewolf
+
+      #Printing
+      #gtklp
+      #system-config-printer  
+      docker
+    
+      # ====== AI Shit ====== 
+      #lmstudio
+      #kdePackages.kdenlive
+      python312
+      python312Packages.pip
+      openai-whisper
+      iw4x-launcher
+      osu-lazer-bin
+      vesktop
+      screen
+      rusty-path-of-building
+    ])
+
+
+    ++
+
+    (with pkgs-unstable; [
+      shadps4
+      terraria-server
+      #rpcs3
+      #osu-lazer-bin
+      #winboat
+    ]);
+
+
+  # ====== Allow Insecure Packages ====== 
+  nixpkgs.config.permittedInsecurePackages = ["qtwebengine-5.15.19"];
+
+
+    # ====== OBS Studio ======
+    programs.obs-studio = {
+      enable = true;
+      package = pkgs-unstable.obs-studio;
+      plugins = with pkgs-unstable.obs-studio-plugins; [
+        obs-tuna
+        obs-3d-effect
+        input-overlay
+        obs-source-clone
+        obs-shaderfilter
+        obs-freeze-filter
+        obs-composite-blur
+        #obs-vertical-canvas
+        obs-pipewire-audio-capture
+        obs-multi-rtmp
+      ];    
+    };
+    
+
+    # ====== Automount Drives ====== 
+    #services.udiskie = {
+    #  enable = true;
+    #  settings = {
+    #    program_options = {
+    #        # replace with your favorite file manager
+    #        file_manager = "${pkgs.nemo-with-extensions}/bin/nemo";
+    #    };
+    #  };
+    #};    
+
+
+ 
+    # GTK Setups
+    #gtk = {
+    #  enable = true;
+    #  theme = {
+    #    package = pkgs.flat-remix-gtk;
+    #    name = "Flat-Remix-GTK-Grey-Darkest";
+    #  };
+    #};
+
+    # ====== Bash ======  
+     programs.bash = {
+        enable = true;
+        enableCompletion = true;
+        profileExtra = ''
+          #if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+          #  exec Hyprland
+          #fi
+        '';
+        initExtra = ''
+          fastfetch
+          if [ -f $HOME/.bashrc-personal ]; then
+            source $HOME/.bashrc-personal
+          fi
+        '';
+        shellAliases = {
+         update = "nh os boot --update /home/nath/NathOS/";
+         rebuild = "nh os boot  /home/nath/NathOS/";
+         home = "nh home switch /home/nath/NathOS/";
+         ls = "eza --icons"; 
+        };
+      };
+
+  # Create XDG Dirs
+  #  xdg = {
+  #    userDirs = {
+  #      enable = true;
+  #      createDirectories = true;
+  #    };
+  #  };  
+
+    # ====== Home File Placement ====== # 
+      home.file = {
+        ".config/fastfetch" = {
+          source = ./fastfetch;
+          recursive = true;
+        };
+        ".local/share/icons/NotwaitaBlack" = {
+          source = ./icons/NotwaitaBlack;
+          recursive = true;
+        };
+        ".local/share/fonts" = {
+          source = ./fonts;
+          recursive = true;
+        };
+     };
+ 
+    # ====== XDG Desktop Entries ====== #
+    xdg.desktopEntries = {
+       fallout-ce = {
+         name = "Fallout Community Edition";
+         genericName = "Video Game";
+         exec = "fallout-ce";
+         terminal = false;
+         categories = [ "Application" "Game" ];
+         icon = "/home/nath/.local/share/fallout-ce/fallout.ico";
+       };
+    };   
+
+ 
+    # Steam Proton GE Setup
+     home.sessionVariables = {
+      STEAM_EXTRA_COMPAT_TOOLS_PATHS =
+        "/home/nath/.steam/root/compatabilitytools.d";
+     };
+
+    # Home Manager can also manage your environment variables
+     home.sessionVariables = {
+      # EDITOR = "emacs";
+    };
+
+    # Let Home Manager install and manage itself.
+    programs.home-manager.enable = true;
+  };
+}
