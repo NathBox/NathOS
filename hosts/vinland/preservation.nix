@@ -36,6 +36,8 @@
 
       # Preserve user files
        users.nath = {
+         commonMountOptions = [ "x-gvfs-hide" ];
+
          directories = [
          "NathOS"
          "Pictures"

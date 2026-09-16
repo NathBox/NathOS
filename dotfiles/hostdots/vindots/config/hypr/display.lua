@@ -6,10 +6,9 @@
   --monitor=DP-1,2560x1440@480, 2560x0, 1.066667, vrr, 0
 
 hl.monitor({
-    output = "DP-2",
+    output = "eDP-1",
     mode = "highrr",
-    position = "2560x0",
-    scale = "1.233333",
+    scale = "2.255555",
     --vrr = 1
     --bitdepth = 10,
     --cm = "hdr",
@@ -17,14 +16,6 @@ hl.monitor({
     sdrsaturation = 1.1,
     sdr_min_luminance = 0.005,
     sdr_max_luminance = 335,
-})
-
-  -- Second Monitor
-hl.monitor({
-    output = "HDMI-A-1",
-    mode = "1600x900@60",
-    position = "auto",
-    scale = "auto",
 })
 
   -- unscale XWayland

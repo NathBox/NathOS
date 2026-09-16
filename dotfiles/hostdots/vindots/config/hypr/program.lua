@@ -16,6 +16,7 @@
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_THEME", "NotwaitaBlack")
 hl.env("GDK_SCALE", "1.1")
+hl.env("QT_SCALE_FACTOR", "1.5")
 --env = SDL_VIDEODRIVER,wayland
 --env = GTK_THEME, Raleigh-dark
 --env = ELECTRON_OZONE_PLATFORM_HINT,auto
