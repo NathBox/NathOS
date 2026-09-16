@@ -1,0 +1,12 @@
+{
+  "refreshInterval": 3000,
+  "showCountryFlag": true,
+  "showCityName": false,
+  "showIp": false,
+  "compactMode": true,
+  "clickAction": "panel",
+  "relayClickConnects": true,
+  "confirmDisconnectInLockdown": true,
+  "favoriteCountries": [],
+  "expiryWarningDays": 7
+}
