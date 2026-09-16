@@ -18,7 +18,7 @@
     import-tree.url= "github:vic/import-tree";
 
 
-    # ====== Disko & Preservation
+    # ====== Disko & Preservation ====== 
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -46,10 +46,10 @@
      #  inputs.nixpkgs.follows = "nixpkgs";
      #};
      
-     nixos-hardware = {
-      url = "github:NixOS/nixos-hardware";
-      inputs.nixpkgs.follows = "nixpkgs";
-     };
+     #nixos-hardware = {
+     # url = "github:NixOS/nixos-hardware";
+     # inputs.nixpkgs.follows = "nixpkgs";
+     #};
   };
 
   # ====== Variables ======
