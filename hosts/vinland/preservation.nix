@@ -58,6 +58,7 @@
          ".cache/noctalia-qs"
          ".config"
          ".icons"
+         ".ssh"
         # ".bitcoin"
         # ".bitmonero"
          ];
