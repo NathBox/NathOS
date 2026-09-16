@@ -47,10 +47,10 @@
         "capsuleColorKey": "primary",
         "capsuleOpacity": 0.12,
         "contentPadding": 6,
-        "density": "comfortable",
+        "density": "spacious",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
-        "fontScale": 1.05,
+        "fontScale": 1.16,
         "frameRadius": 12,
         "frameThickness": 8,
         "hideOnOverview": false,
@@ -62,7 +62,8 @@
         "monitors": [
             "DP-1",
             "HDMI-A-1",
-            "DP-2"
+            "DP-2",
+            "eDP-1"
         ],
         "mouseWheelAction": "none",
         "mouseWheelWrap": true,
@@ -254,7 +255,7 @@
                     "deviceNativePath": "__default__",
                     "displayMode": "graphic-clean",
                     "hideIfIdle": false,
-                    "hideIfNotDetected": true,
+                    "hideIfNotDetected": false,
                     "id": "Battery",
                     "showNoctaliaPerformance": false,
                     "showPowerProfiles": false
@@ -294,7 +295,7 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generationMethod": "faithful",
+        "generationMethod": "monochrome",
         "manualSunrise": "06:30",
         "manualSunset": "19:30",
         "monitorForColors": "",
@@ -363,6 +364,9 @@
                         "textColor": "none"
                     },
                     "id": "plugin:timer"
+                },
+                {
+                    "id": "WiFi"
                 }
             ],
             "right": [
@@ -453,7 +457,7 @@
         "animationDisabled": false,
         "animationSpeed": 0.8,
         "autoStartAuth": false,
-        "avatarImage": "/home/nath/NathOS/sunglarse.jpg",
+        "avatarImage": "/home/nath/NathOS/global/sunglarse.jpg",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
@@ -500,7 +504,7 @@
         "passwordChars": false,
         "radiusRatio": 1.1500000000000001,
         "reverseScroll": false,
-        "scaleRatio": 1.05,
+        "scaleRatio": 1.2,
         "screenRadiusRatio": 1,
         "shadowDirection": "bottom_right",
         "shadowOffsetX": 2,
@@ -526,7 +530,7 @@
     },
     "idle": {
         "customCommands": "[]",
-        "enabled": false,
+        "enabled": true,
         "fadeDuration": 3,
         "lockCommand": "",
         "lockTimeout": 0,
@@ -534,7 +538,7 @@
         "resumeScreenOffCommand": "",
         "resumeSuspendCommand": "",
         "screenOffCommand": "",
-        "screenOffTimeout": 180,
+        "screenOffTimeout": 0,
         "suspendCommand": "",
         "suspendTimeout": 0
     },
@@ -726,9 +730,9 @@
     "ui": {
         "boxBorderEnabled": false,
         "fontDefault": "Arimo Nerd Font",
-        "fontDefaultScale": 1.1,
+        "fontDefaultScale": 1.16,
         "fontFixed": "monospace",
-        "fontFixedScale": 1.1,
+        "fontFixedScale": 1.1500000000000001,
         "panelBackgroundOpacity": 0.9,
         "panelsAttachedToBar": false,
         "scrollbarAlwaysVisible": false,
@@ -1025,7 +1029,7 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "",
+        "wallhavenQuery": "Vinland",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
