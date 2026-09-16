@@ -17,6 +17,7 @@
        preserveAt."/persistent" = {
          directories = [
            "/etc/nixos"
+           "/etc/NetworkManager/system-connections"
            "/var/lib/bluetooth"
            "/var/log"
           # "/tmp"
