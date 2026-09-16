@@ -1,0 +1,6 @@
+modmap:
+  - name: Global
+    remap:
+      Home: Print
+    device:
+      only: '2.4G Wireless Keyboard'
