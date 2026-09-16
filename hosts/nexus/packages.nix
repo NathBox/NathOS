@@ -5,6 +5,7 @@
     environment.systemPackages = (with pkgs; [
       wget
       git
+      gh
       curl
       appimage-run
       wineWow64Packages.waylandFull

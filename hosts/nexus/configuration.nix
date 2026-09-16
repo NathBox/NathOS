@@ -24,7 +24,7 @@
       self.nixosModules.hyprland
       self.nixosModules.noctalia
       self.nixosModules.mullvad
-      self.nixosModules.spotify        
+#      self.nixosModules.spotify        
      #self.nixosModules.memlock
       self.nixosModules.obs
       self.nixosModules.xdg
@@ -139,7 +139,7 @@
       enable = true;
       clean = {
         enable = true;
-       # extraArgs = "--keep-since 4d --keep 4";
+        extraArgs = "--keep-since 4d --keep 4";
       };
       flake = "/home/nath/NathOS";
     };
