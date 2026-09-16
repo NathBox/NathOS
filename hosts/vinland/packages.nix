@@ -99,13 +99,14 @@
       #davinci-resolve-studio
       mullvad-vpn
 #      quartus-prime-lite
+      upower
     ])
 
     ++
 
     (with pkgs-unstable; [
     #mullvad-vpn
-    quartus-prime-lite
+    #quartus-prime-lite
     ]);
 
     # ====== Package Build Fail Workarounds ======

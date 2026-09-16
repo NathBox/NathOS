@@ -730,7 +730,7 @@
     "ui": {
         "boxBorderEnabled": false,
         "fontDefault": "Arimo Nerd Font",
-        "fontDefaultScale": 1.16,
+        "fontDefaultScale": 1.1500000000000001,
         "fontFixed": "monospace",
         "fontFixedScale": 1.1500000000000001,
         "panelBackgroundOpacity": 0.9,
