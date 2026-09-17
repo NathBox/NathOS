@@ -25,7 +25,8 @@
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         },
         "fancy-audiovisualizer": {
-            "enabled": false
+            "enabled": false,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         },
         "file-search": {
             "enabled": true,

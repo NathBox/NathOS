@@ -47,10 +47,10 @@
         "capsuleColorKey": "primary",
         "capsuleOpacity": 0.12,
         "contentPadding": 6,
-        "density": "comfortable",
+        "density": "default",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
-        "fontScale": 1.1500000000000001,
+        "fontScale": 0.9299999999999999,
         "frameRadius": 12,
         "frameThickness": 8,
         "hideOnOverview": false,
@@ -336,25 +336,16 @@
         "shortcuts": {
             "left": [
                 {
+                    "id": "WiFi"
+                },
+                {
                     "id": "Bluetooth"
-                },
-                {
-                    "id": "Notifications"
-                },
-                {
-                    "id": "NoctaliaPerformance"
-                },
-                {
-                    "id": "DarkMode"
                 },
                 {
                     "id": "WallpaperSelector"
                 },
                 {
-                    "defaultSettings": {
-                        "iconColor": "none"
-                    },
-                    "id": "plugin:color-scheme-creator"
+                    "id": "Notifications"
                 },
                 {
                     "defaultSettings": {
@@ -366,7 +357,7 @@
                     "id": "plugin:timer"
                 },
                 {
-                    "id": "WiFi"
+                    "id": "NoctaliaPerformance"
                 }
             ],
             "right": [
@@ -504,7 +495,7 @@
         "passwordChars": false,
         "radiusRatio": 1.1500000000000001,
         "reverseScroll": false,
-        "scaleRatio": 1.1500000000000001,
+        "scaleRatio": 0.9000000000000001,
         "screenRadiusRatio": 1,
         "shadowDirection": "bottom_right",
         "shadowOffsetX": 2,
@@ -730,7 +721,7 @@
     "ui": {
         "boxBorderEnabled": false,
         "fontDefault": "Arimo Nerd Font",
-        "fontDefaultScale": 1.1500000000000001,
+        "fontDefaultScale": 1.13,
         "fontFixed": "monospace",
         "fontFixedScale": 1.1500000000000001,
         "panelBackgroundOpacity": 0.9,

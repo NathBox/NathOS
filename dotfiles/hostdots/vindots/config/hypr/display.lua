@@ -8,7 +8,7 @@
 hl.monitor({
     output = "eDP-1",
     mode = "highrr",
-    scale = "2.255555",
+    scale = "2",
     --vrr = 1
     --bitdepth = 10,
     --cm = "hdr",

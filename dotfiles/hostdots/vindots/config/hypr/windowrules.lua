@@ -8,10 +8,13 @@ hl.window_rule({
 })
 
 --# Alacritty
---#windowrulev2 = opacity 0.8,class:^(Alacritty)$
---#windowrulev2 = noborder,class:^(Alacritty)$
---#windowrulev2 = pseudo,class:^(Alacritty)$
-
+hl.window_rule({
+    match = {
+        class = "^(Alacritty)$",
+    },
+    float = true,
+    size = "1400 900",
+})
 --# Nemo File Manager
 
 hl.window_rule({
@@ -121,26 +124,5 @@ hl.window_rule({
 
 --# Kdenlive
 --#windowrulev2 = fullscreen, class:^(org.kde.kdenlive)$
-
---# Workspace Rules
-hl.workspace_rule({
-    workspace = "1",
-    monitor = "DP-2",
-})
-
-hl.workspace_rule({
-    workspace = "2",
-    monitor = "DP-2",
-})
-
-hl.workspace_rule({
-    workspace = "3",
-    monitor = "DP-2",
-})
-
-hl.workspace_rule({
-    workspace = "4",
-    monitor = "HDMI-A-1",
-})
 
 
