@@ -1,0 +1,16 @@
+[font]
+size = 16.0
+
+[general]
+import = ["./themes/nord.toml"]
+
+[window]
+opacity = 0.9
+
+[window.dimensions]
+columns = 60
+lines = 25
+
+[window.padding]
+x=6
+y=6

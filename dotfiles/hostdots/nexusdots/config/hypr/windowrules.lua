@@ -8,15 +8,18 @@ hl.window_rule({
 })
 
 --# Alacritty
---#windowrulev2 = opacity 0.8,class:^(Alacritty)$
---#windowrulev2 = noborder,class:^(Alacritty)$
---#windowrulev2 = pseudo,class:^(Alacritty)$
+hl.window_rule({
+    match = {
+        class = "^(Alacritty)$",
+    },
+    float = true,
+    size = "1284 900",
+})
 
---# Nemo File Manager
 
 hl.window_rule({
     match = {
-        class = "^(thunar)$",
+        class = "^(Thunar)$",
     },
     float = true,
     size = "1200 800",
