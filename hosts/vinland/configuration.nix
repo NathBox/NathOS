@@ -138,7 +138,7 @@
       enable = true;
       clean = {
         enable = true;
-       # extraArgs = "--keep-since 4d --keep 4";
+        extraArgs = "--keep-since 4d --keep 4";
       };
       flake = "/home/nath/NathOS";
     };

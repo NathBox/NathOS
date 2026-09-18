@@ -16,7 +16,7 @@
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_THEME", "NotwaitaBlack")
 hl.env("GDK_SCALE", "1.1")
-hl.env("QT_SCALE_FACTOR", "1.5")
+hl.env("STEAM_FORCE_DESKTOPUI_SCALING", "5")
 --env = SDL_VIDEODRIVER,wayland
 --env = GTK_THEME, Raleigh-dark
 --env = ELECTRON_OZONE_PLATFORM_HINT,auto
@@ -25,6 +25,5 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("noctalia-shell")
     hl.exec_cmd("dunst")
    -- hl.exec_cmd("steam")
-    hl.exec_cmd("xremap ~/NathOS/dotfiles/hostdots/nexusdots/config/hypr/homeprint.yml --device '2.4G Wireless Keyboard'")
 end)
 

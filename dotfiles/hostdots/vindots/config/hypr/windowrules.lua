@@ -15,14 +15,14 @@ hl.window_rule({
     float = true,
     size = "1200 750",
 })
---# Nemo File Manager
+--# Thunar File Manager
 
 hl.window_rule({
     match = {
         class = "^(thunar)$",
     },
     float = true,
-    size = "1200 800",
+    size = "1000 750",
 })
 
 --# Bluetooth
@@ -43,6 +43,7 @@ hl.window_rule({
         title = "^(Volume Control)$",
     },
     float = true,
+    size = "700 400",
 })
 
 --# Steam Window Rules
@@ -108,7 +109,7 @@ hl.window_rule({
         class = "^(com.github.th_ch.youtube_music)$",
     },
     float = true,
-    size = "1200 900",
+    size = "1100 700",
     workspace = "3 silent",
 })
 
