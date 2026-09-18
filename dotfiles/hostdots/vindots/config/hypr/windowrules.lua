@@ -13,7 +13,7 @@ hl.window_rule({
         class = "^(Alacritty)$",
     },
     float = true,
-    size = "1400 900",
+    size = "1200 750",
 })
 --# Nemo File Manager
 

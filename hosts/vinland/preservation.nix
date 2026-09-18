@@ -29,10 +29,9 @@
          ];
 
          files = [
-           {
-           file = "/etc/machine-id";
-           inInitrd = true;
-           }
+           { file = "/etc/machine-id"; inInitrd = true; }
+ #          "/etc/passwd"
+#           "/etc/shadow"
          ];
 
       # Preserve user files

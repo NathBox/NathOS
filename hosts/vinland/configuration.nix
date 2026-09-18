@@ -77,7 +77,11 @@
       };
     };
     
-
+    # ====== Power ======
+    services.upower = {
+      enable = true;
+    };
+   
     # ====== Audio ====== #
     services.pipewire = {
       enable = true;
