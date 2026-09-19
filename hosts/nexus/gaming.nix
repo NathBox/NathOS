@@ -60,6 +60,8 @@
 
     (with pkgs-unstable; [
      # rpcs3
+     shadps4
+     shadps4-qtlauncher
     ]);
   };
 }
