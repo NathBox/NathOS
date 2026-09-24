@@ -51,7 +51,7 @@
          "Coding"
          "Voice"
          "Servers"
-         "Standalone Programs"
+         "Programs"
          "YouTube"
          ".steam"
          ".local/share"

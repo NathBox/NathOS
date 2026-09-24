@@ -103,6 +103,7 @@
 
     (with pkgs-unstable; [
     #mullvad-vpn
+    #quartus-prime-lite
     ]);
 
     # ====== Package Build Fail Workarounds ======

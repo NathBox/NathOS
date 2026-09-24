@@ -30,6 +30,7 @@
       self.nixosModules.xdg
       self.nixosModules.udev
      # self.nixosModules.vm
+      self.nixosModules.distrobox
       inputs.home-manager.nixosModules.default
       inputs.disko.nixosModules.disko
       inputs.preservation.nixosModules.default
