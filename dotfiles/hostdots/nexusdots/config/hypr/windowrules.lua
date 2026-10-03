@@ -16,7 +16,7 @@ hl.window_rule({
     size = "1284 900",
 })
 
-
+-- Thunar
 hl.window_rule({
     match = {
         class = "^(Thunar)$",
@@ -24,6 +24,15 @@ hl.window_rule({
     float = true,
     size = "1200 800",
 })
+
+hl.window_rule({
+    match = {
+        class = "^(thunar)$",
+    },
+    float = true,
+    size = "1200 800",
+})
+
 
 --# Bluetooth
 hl.window_rule({
@@ -120,6 +129,16 @@ hl.window_rule({
     },
     animation = "popin 75%",
 })
+
+-- Project Diablo II
+hl.window_rule({
+    match = {
+        title = "^(Project Diablo 2 Launcher)$",
+    },
+    float = true,
+    size = "800 600",
+})
+
 
 
 --# Kdenlive

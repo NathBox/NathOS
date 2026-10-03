@@ -18,7 +18,7 @@
  
       # ====== Launchers ======
       prismlauncher 
-      umu-launcher
+     # umu-launcher
       r2modman
       (lutris.override {
         extraLibraries = pkgs: [ ];
@@ -62,6 +62,7 @@
      # rpcs3
      shadps4
      shadps4-qtlauncher
+     umu-launcher
     ]);
   };
 }
