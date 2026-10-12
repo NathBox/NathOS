@@ -1,7 +1,7 @@
 { self, inputs, ... }: {
   
-  # ====== System Vinland Packages ======
-  flake.nixosModules.vinlandPackages = { config, pkgs, pkgs-unstable, ... }: {
+  # ====== System Nexus Packages ======
+  flake.nixosModules.nexusPackages = { config, pkgs, pkgs-unstable, ... }: {
     environment.systemPackages = (with pkgs; [
       wget
       git
@@ -11,8 +11,7 @@
       wineWow64Packages.waylandFull
       winetricks
       stow
-     # libimobiledevice
-
+      libimobiledevice
       #Cli Tools and Terminals
       fastfetch
       alacritty
@@ -32,9 +31,9 @@
       #steamcmd
       #nix-index
       #comma
-     # ffmpeg_6
+      ffmpeg_6
       #vkbasalt
-      #xremap
+      xremap
 
       #Wayland and Hyprland
       grim
@@ -43,12 +42,13 @@
       #wl-clipboard
       hyprcursor
       qimgv
+      noctalia-shell
 
       #Disk Stuff
-      thunar
-      thunar-volman
-      thunar-archive-plugin
-      thunar-media-tags-plugin
+    #  thunar
+    #  thunar-volman
+    #  thunar-archive-plugin
+    #  thunar-media-tags-plugin
       file-roller
       kdePackages.filelight
 
@@ -56,8 +56,8 @@
       mpv
      # vlc
       gimp3
-      #qbittorrent
-      #audacity
+      qbittorrent
+      audacity
      # ardour
       #subtitleedit
       #freetube
@@ -78,7 +78,7 @@
      # bitcoin
       libreoffice
       #anki-bin
-      #ifuse
+      ifuse
 
       #web
       #ungoogled-chromium
@@ -92,14 +92,12 @@
       #kdePackages.kdenlive
       python312
       python312Packages.pip
-      #openai-whisper
-      #vesktop
+      openai-whisper
+      vesktop
       screen
       inputs.helium.packages.${stdenv.hostPlatform.system}.default
-      #davinci-resolve-studio
+      davinci-resolve-studio
       mullvad-vpn
-#      quartus-prime-lite
-      upower
     ])
 
     ++

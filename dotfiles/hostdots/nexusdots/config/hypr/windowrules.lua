@@ -94,7 +94,7 @@ hl.window_rule({
 --# Fluxer
 hl.window_rule({
     match = {
-        class = "^(fluxer-canary)$",
+        class = "^(app.fluxer.FluxerDesktopCanary)$",
     },
     workspace = "3",
     workspace = "3 silent",
@@ -138,6 +138,14 @@ hl.window_rule({
     float = true,
     size = "800 600",
 })
+
+hl.window_rule({
+    match = {
+        title = "^(Diablo II)$",
+    },
+    fullscreen = true;
+})
+
 
 
 

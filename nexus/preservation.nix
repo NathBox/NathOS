@@ -1,7 +1,7 @@
 { self, inputs, ... }: {
  
   # ====== Preservation ======
-  flake.nixosModules.vinlandPreservation = { config, ... }: {
+  flake.nixosModules.nexusPreservation = { config, ... }: {
    
     # machineid error
     systemd.services.systemd-machine-id-commit = {
@@ -17,7 +17,6 @@
        preserveAt."/persistent" = {
          directories = [
            "/etc/nixos"
-           "/etc/NetworkManager/system-connections"
            "/var/lib/bluetooth"
            "/var/log"
           # "/tmp"
@@ -30,14 +29,16 @@
 
          files = [
            { file = "/etc/machine-id"; inInitrd = true; }
-           #"/etc/passwd"
-          # "/etc/shadow"
+          "/etc/passwd" 
+          "/etc/shadow"
          ];
 
       # Preserve user files
        users.nath = {
-         commonMountOptions = [ "x-gvfs-hide" ];
-
+         commonMountOptions = [
+           "x-gvfs-hide"
+         ];
+         
          directories = [
          "NathOS"
          "Pictures"
@@ -50,15 +51,15 @@
          "Coding"
          "Voice"
          "Servers"
-         "Standalone Programs"
+         "Programs"
          "YouTube"
          ".steam"
          ".local/share"
          ".local/state/wireplumber"
          ".wine"
+         ".config"
          ".cache/noctalia"
          ".cache/noctalia-qs"
-         ".config"
          ".icons"
          ".ssh"
         # ".bitcoin"
