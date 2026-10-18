@@ -20,9 +20,8 @@
       self.nixosModules.timezone
       self.nixosModules.unstable
       self.nixosModules.fonts
-      self.nixosModules.sddm
+#      self.nixosModules.sddm
       self.nixosModules.hyprland
-      self.nixosModules.noctalia
       self.nixosModules.mullvad
 #      self.nixosModules.spotify        
      #self.nixosModules.memlock
@@ -39,7 +38,7 @@
 
   # ====== Kernel ====== 
   boot = {
-    #kernelPackages = pkgs.linuxPackages_latest;
+   # kernelPackages = pkgs.linuxPackages_latest;
     kernelPackages = pkgs.linuxPackages_zen; # Zen Kernel for Gaming
     kernelParams = [ 
 #      "quiet" # Disables Systemd Load screen for faster boot
@@ -98,7 +97,7 @@
     hardware.graphics = {
       enable = true;
       enable32Bit = true;
-      package = pkgs-unstable.mesa;
+      package = pkgs.mesa;
       extraPackages = with pkgs; [
         rocmPackages.clr.icd # This is for Davinvi Resolve
       ];
@@ -140,7 +139,7 @@
       enable = true;
       clean = {
         enable = true;
-        extraArgs = "--keep-since 4d --keep 4";
+        #extraArgs = "--keep-since 4d --keep 4";
       };
       flake = "/home/nath/NathOS";
     };
