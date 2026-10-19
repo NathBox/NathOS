@@ -18,7 +18,7 @@
  
       # ====== Launchers ======
       #prismlauncher 
-      umu-launcher
+      #umu-launcher
       (lutris.override {
         extraLibraries = pkgs: [ ];
         extraPkgs = pkgs: [ ];
@@ -33,7 +33,7 @@
       #osu-lazer-bin
       
       # ====== Emulation ======
-      #dolphin-emu
+      dolphin-emu
       #rpcs3
       #pcsx2
       #nestopia-ue
@@ -57,6 +57,7 @@
 
     (with pkgs-unstable; [
      # rpcs3
+     umu-launcher
     ]);
   };
 }

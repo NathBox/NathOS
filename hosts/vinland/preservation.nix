@@ -30,7 +30,7 @@
 
          files = [
            { file = "/etc/machine-id"; inInitrd = true; }
-           #"/etc/passwd"
+          # "passwd"
           # "/etc/shadow"
          ];
 

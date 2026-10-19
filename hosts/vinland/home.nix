@@ -6,9 +6,6 @@
      
  {  
      imports = [
- #      self.homeModules.nexusHyprland
- #      self.homeModules.nexusNoctalia
- #      self.homeModules.dotfiles
      ];
 
      home = { 
