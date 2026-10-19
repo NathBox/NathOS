@@ -43,6 +43,8 @@
       #wl-clipboard
       hyprcursor
       qimgv
+      noctalia-shell
+      #noctalia
 
       #Disk Stuff
       thunar
@@ -54,7 +56,7 @@
 
       #Media
       mpv
-     # vlc
+      vlc
       gimp3
       #qbittorrent
       #audacity
@@ -97,7 +99,7 @@
       screen
       inputs.helium.packages.${stdenv.hostPlatform.system}.default
       #davinci-resolve-studio
-      mullvad-vpn
+     # mullvad-vpn
 #      quartus-prime-lite
       upower
     ])

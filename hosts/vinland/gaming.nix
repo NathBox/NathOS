@@ -19,10 +19,10 @@
       # ====== Launchers ======
       #prismlauncher 
       umu-launcher
-      #(lutris.override {
-      #  extraLibraries = pkgs: [ ];
-      #  extraPkgs = pkgs: [ ];
-      #})
+      (lutris.override {
+        extraLibraries = pkgs: [ ];
+        extraPkgs = pkgs: [ ];
+      })
       
       # ====== Games ======
       #fallout-ce
