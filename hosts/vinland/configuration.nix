@@ -25,6 +25,7 @@
       #self.nixosModules.obs
       self.nixosModules.xdg
      # self.nixosModules.vm
+      self.nixosModules.distrobox
       inputs.home-manager.nixosModules.default
       inputs.disko.nixosModules.disko
       inputs.preservation.nixosModules.default
