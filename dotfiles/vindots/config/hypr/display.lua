@@ -22,7 +22,7 @@ hl.monitor({
 
 hl.config({
     xwayland = {
-        force_zero_scaling = true,
+        force_zero_scaling = false,
     },
     render = {
         --cm_fs_passthrough=2
@@ -32,3 +32,5 @@ hl.config({
     },
 })
 
+--hl.env("GDK_SCALE", "5")
+--hl.env("XCURSOR_SIZE", "32")

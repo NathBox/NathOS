@@ -21,6 +21,7 @@
       vim
       unzip
       unrar
+      picoscope
       zip
       fd
       runapp
