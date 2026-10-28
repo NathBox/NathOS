@@ -50,6 +50,7 @@
       mangojuice
       lsfg-vk
       lsfg-vk-ui
+      dotnet-runtime
       #python313Packages.ds4drv
       #rusty-path-of-building 
    
